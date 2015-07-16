@@ -1,21 +1,15 @@
 #include "simpletools.h"                      // Include simple tools
 #include "debuggingCog.h"
 
-int main()                                    
-{
-  unsigned int displayingCog = 0;
-  unsigned int directions;
-  unsigned int states;
-  
-  set_directions(0x7,0x0,0x0);
-  debugPrint("Pin Directions %d\n",get_directions(0x7,0x0));
-  
-  while(1){
-    readTouchButtons(&states);
-    handleInputs(&states);
-    //displayOnLeds(displayingCog,states);
-    //displayingCog += 1;
-    //sleep(1);  
-  }  
-}
+int COG_0_STATE = 0;
+int COG_1_STATE = 1;
+int COG_2_STATE = 2;
+int COG_3_STATE = 3;
+int COG_4_STATE = 4;
+int COG_5_STATE = 5;
+int COG_6_STATE = 6;
+int COG_7_STATE = 7;
 
+int main(){
+  int * debuggingCog = cog_run(&debuggingCogMain,15);
+}  

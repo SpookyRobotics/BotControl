@@ -6,7 +6,7 @@ of the corresponding cog and display its state on the LEDs
 #include "simpletools.h"    
 #include <stdarg.h>
 
-#define DEBUG 1                  
+#define DEBUG 0                
 
 
 void debugPrint(char* string , int num, ...){
@@ -177,8 +177,45 @@ void displayHexDigit(int bit0Led, char hexDigit){
       debugPrint("Error in displayHexDigit",0); 
     }      
 }  
+extern int COG_0_STATE;
+extern int COG_1_STATE;
+extern int COG_2_STATE;
+extern int COG_3_STATE;
+extern int COG_4_STATE;
+extern int COG_5_STATE;
+extern int COG_6_STATE;
+extern int COG_7_STATE;
+
 void displayCogState(int cogToDisplay){
-  displayHexDigit(7,cogToDisplay+7);
+  int cogState = 0;
+  switch(cogToDisplay){
+    case 0:
+       cogState = COG_0_STATE;
+       break;
+    case 1:
+       cogState = COG_1_STATE;
+       break;
+    case 2:
+       cogState = COG_2_STATE;
+       break;
+    case 3:
+       cogState = COG_3_STATE;
+       break;
+    case 4:
+       cogState = COG_4_STATE;
+       break;
+    case 5:
+       cogState = COG_5_STATE;
+       break;
+    case 6:
+       cogState = COG_6_STATE;
+       break;
+    case 7:
+       cogState = COG_7_STATE;
+       break;
+    
+  }    
+  displayHexDigit(7,cogState);
 }    
 
 void clearLeds(){
@@ -203,4 +240,18 @@ void handleInputs(unsigned int * states){
   }    
   
 }  
+
+void debuggingCogMain(){
+  unsigned int displayingCog = 0;
+  unsigned int directions;
+  unsigned int states;
+  
+  set_directions(0x7,0x0,0x0);
+  debugPrint("Pin Directions %d\n",get_directions(0x7,0x0));
+  
+  while(1){
+    readTouchButtons(&states);
+    handleInputs(&states); 
+  }  
+}
   

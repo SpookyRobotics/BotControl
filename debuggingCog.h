@@ -3,5 +3,5 @@
 void debugPrint(char* string , int num, ...);
 void readTouchButtons(unsigned int * states);
 void handleInputs(unsigned int * states);
-
+void debuggingCogMain();
 #endif
