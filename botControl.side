@@ -1,6 +1,9 @@
 botControl.c
 debuggingCog.c
 debuggingCog.h
+cogDefinitions.h
+debugLedDisplay.c
+debugLedDisplay.h
 >compiler=C
 >memtype=cmm main ram compact
 >optimize=-Os
