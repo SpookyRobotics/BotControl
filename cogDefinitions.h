@@ -7,7 +7,6 @@ void cog1Program(){
   while(1){
     serviceCollisionDetector();
     serviceReedSwitch();
-    spinMotor();
   }    
 }  
 

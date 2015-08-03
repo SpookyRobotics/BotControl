@@ -1,5 +1,6 @@
 #include "debugLedDisplay.h"
 #include "debuggingCog.h"
+#include "simpletools.h"
 #include <stdarg.h>
 
 /**

@@ -6,6 +6,8 @@ debugLedDisplay.c
 debugLedDisplay.h
 sensors.h
 sensors.c
+effectors.c
+effectors.h
 >compiler=C
 >memtype=cmm main ram compact
 >optimize=-Os
