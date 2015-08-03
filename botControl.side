@@ -4,6 +4,8 @@ debuggingCog.h
 cogDefinitions.h
 debugLedDisplay.c
 debugLedDisplay.h
+sensors.h
+sensors.c
 >compiler=C
 >memtype=cmm main ram compact
 >optimize=-Os

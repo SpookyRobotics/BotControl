@@ -1,5 +1,6 @@
 #include "simpletools.h"                      // Include simple tools
 #include "debuggingCog.h"
+#include "sensors.h"
 #include "cogDefinitions.h"
 
 

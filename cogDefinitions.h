@@ -3,14 +3,22 @@
 
 void NO_PROGRAM(){}
 
+void cog1Program(){
+  while(1){
+    serviceCollisionDetector();
+    serviceReedSwitch();
+    spinMotor();
+  }    
+}  
+
 #define COG_0_PROGRAM debuggingCogMain
 #define COG_0_STACK_SIZE 15
 #define COG_0_DEBUG_STACK_SIZE 70
 int COG_0_STATE = 0;
 
 #define COG_1_PROGRAM NO_PROGRAM
-#define COG_1_STACK_SIZE 0
-#define COG_1_DEBUG_STACK_SIZE 0
+#define COG_1_STACK_SIZE 5
+#define COG_1_DEBUG_STACK_SIZE 5
 int COG_1_STATE = 0;
 
 #define COG_2_PROGRAM NO_PROGRAM
