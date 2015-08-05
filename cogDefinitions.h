@@ -7,7 +7,7 @@ void NO_PROGRAM(){}
 
 // Read all inputs in parallel 
 void cog1Program(){
-  unsigned int triggerMapUpdate;
+  unsigned int triggerMapUpdate = 0;
   while(1){
     triggerMapUpdate = SENSOR_TRIGGER_MAP;
     triggerMapUpdate |= serviceCollisionDetector();
@@ -18,12 +18,14 @@ void cog1Program(){
 
 // Control all non Motor output
 void cog2Program(){
-  unsigned int triggerMap;
+  unsigned int triggerMap = 0;
+  unsigned int lastSeenTriggerMap = 0;
   while(1){
     triggerMap = SENSOR_TRIGGER_MAP;
-    if(triggerMap > 0){
-      triggerMap = 0;
-    }      
+    if(triggerMap > 0 && triggerMap != lastSeenTriggerMap){
+      
+    }
+    lastSeenTriggerMap = triggerMap;      
   }    
 }
 
