@@ -1,14 +1,37 @@
 #ifndef COG_DEFINITIONS_HEADER
 #define COG_DEFINITIONS_HEADER
 
+volatile unsigned int SENSOR_TRIGGER_MAP;
+
 void NO_PROGRAM(){}
 
+// Read all inputs in parallel 
 void cog1Program(){
+  unsigned int triggerMapUpdate;
   while(1){
-    serviceCollisionDetector();
-    serviceReedSwitch();
+    triggerMapUpdate = SENSOR_TRIGGER_MAP;
+    triggerMapUpdate |= serviceCollisionDetector();
+    triggerMapUpdate |= serviceReedSwitch();
+    SENSOR_TRIGGER_MAP = triggerMapUpdate;
   }    
 }  
+
+// Control all non Motor output
+void cog2Program(){
+  unsigned int triggerMap;
+  while(1){
+    triggerMap = SENSOR_TRIGGER_MAP;
+    if(triggerMap > 0){
+      triggerMap = 0;
+    }      
+  }    
+}
+
+// Control left and right motors
+void cog3Program(){
+   
+}  
+  
 
 #define COG_0_PROGRAM debuggingCogMain
 #define COG_0_STACK_SIZE 15
