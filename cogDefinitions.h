@@ -2,15 +2,35 @@
 #define COG_DEFINITIONS_HEADER
 
 #include "effectors.h"
-
+volatile unsigned int SENSOR_TRIGGER_MAP;
 void NO_PROGRAM(){}
 
 void cog1Program(){
+  unsigned int triggerMapUpdate = 0;
   while(1){
-    serviceCollisionDetector();
-    serviceReedSwitch();
+    triggerMapUpdate = SENSOR_TRIGGER_MAP;
+    triggerMapUpdate |= serviceCollisionDetector();
+    triggerMapUpdate |= serviceReedSwitch();
+    SENSOR_TRIGGER_MAP = triggerMapUpdate;
   }    
 }  
+// Control all non Motor output
+void cog2Program(){
+  unsigned int triggerMap = 0;
+  unsigned int lastSeenTriggerMap = 0;
+  while(1){
+    triggerMap = SENSOR_TRIGGER_MAP;
+    if(triggerMap > 0 && triggerMap != lastSeenTriggerMap){
+      
+    }
+    lastSeenTriggerMap = triggerMap;      
+  }    
+}
+
+// Control left and right motors
+void cog3Program(){
+   
+} 
 
 void testServo(){
   int SERVO = 20;
@@ -78,9 +98,9 @@ void testProgram(){
     }  
   }
   low(RED_LASER);
-} 
-     
-#define COG_0_PROGRAM testProgram
+}
+
+#define COG_0_PROGRAM debuggingCogMain
 #define COG_0_STACK_SIZE 15
 #define COG_0_DEBUG_STACK_SIZE 70
 int COG_0_STATE = 0;
