@@ -33,6 +33,16 @@ int validEffector(unsigned int sensorPin){
     case RED_LASER:
     case SPEAKER:
     case SERVO1:
+    case DEBUG_LED_1:
+    case DEBUG_LED_2:
+    case DEBUG_LED_3:
+    case DEBUG_LED_4:
+    case DEBUG_LED_5:
+    case DEBUG_LED_6:
+    case DEBUG_LED_7:
+    case DEBUG_LED_8:
+    case DEBUG_LED_9:
+    case DEBUG_LED_10:
       return 1;
     default: 
       return 0; 
