@@ -3,8 +3,8 @@
 #include "sensors.h"
 #include "cogDefinitions.h"
 
+
 void testComm1(){
-  unsigned int SENSOR_TRIGGER_MAP = 0;
   while(1){
     SENSOR_TRIGGER_MAP += 1;
     if(SENSOR_TRIGGER_MAP == 1000){
@@ -27,6 +27,7 @@ void testComm2(){
     lastSeenTriggerMap = triggerMap;      
   }  
 }  
+
 void testServo(){
   int SERVO = 20;
   unsigned int count = 0;

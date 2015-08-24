@@ -4,6 +4,7 @@
 
 
 #define NULL_POINTER ( (void*) NULL)
+volatile unsigned int SENSOR_TRIGGER_MAP;
 
 int * cog0 = NULL_POINTER;
 int * cog1 = NULL_POINTER;

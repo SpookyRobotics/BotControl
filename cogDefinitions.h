@@ -1,6 +1,7 @@
 #ifndef COG_DEFINITIONS_HEADER
 #define COG_DEFINITIONS_HEADER
 
+
 void testComm1();
 void testComm2();
 
@@ -10,7 +11,7 @@ void testComm2();
 extern int COG_0_STATE;
 
 #define COG_1_PROGRAM testComm2
-#define COG_1_STACK_SIZE 5
+#define COG_1_STACK_SIZE 15
 #define COG_1_DEBUG_STACK_SIZE 5
 extern int COG_1_STATE;
 
@@ -44,7 +45,7 @@ extern int COG_6_STATE;
 #define COG_7_DEBUG_STACK_SIZE 0
 extern int COG_7_STATE;
 
-volatile unsigned int SENSOR_TRIGGER_MAP;
+extern volatile unsigned int SENSOR_TRIGGER_MAP;
 void NO_PROGRAM();
 void cog0Program();
 void cog1Program();  

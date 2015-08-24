@@ -14,6 +14,7 @@ testFunctions.c
 >memtype=lmm main ram
 >optimize=-O0
 >-m32bit-doubles
+>-Wall
 >-fno-exceptions
 >defs::-std=c99
 >-lm
