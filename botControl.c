@@ -1,17 +1,18 @@
-#include "simpletools.h"                      // Include simple tools
-#include "debuggingCog.h"
-#include "sensors.h"
+#include "simpletools.h"
 #include "cogDefinitions.h"
+#include "sensors.h"
 
 
-int * cog0 = NULL;
-int * cog1 = NULL;
-int * cog2 = NULL;
-int * cog3 = NULL;
-int * cog4 = NULL;
-int * cog5 = NULL;
-int * cog6 = NULL;
-int * cog7 = NULL;
+#define NULL_POINTER ( (void*) NULL)
+
+int * cog0 = NULL_POINTER;
+int * cog1 = NULL_POINTER;
+int * cog2 = NULL_POINTER;
+int * cog3 = NULL_POINTER;
+int * cog4 = NULL_POINTER;
+int * cog5 = NULL_POINTER;
+int * cog6 = NULL_POINTER;
+int * cog7 = NULL_POINTER;
 
 int main(){ 
   // Main loop runs COG_7_PROGRAM

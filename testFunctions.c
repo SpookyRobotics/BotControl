@@ -1,0 +1,96 @@
+#include "simpletools.h"
+#include "effectors.h"
+#include "sensors.h"
+#include "cogDefinitions.h"
+
+void testComm1(){
+  unsigned int SENSOR_TRIGGER_MAP = 0;
+  while(1){
+    SENSOR_TRIGGER_MAP += 1;
+    if(SENSOR_TRIGGER_MAP == 1000){
+      SENSOR_TRIGGER_MAP = 0;
+    }
+  }          
+}  
+
+void testComm2(){
+  unsigned int triggerMap = 0;
+  unsigned int lastSeenTriggerMap = 0;
+  while(1){
+    triggerMap = SENSOR_TRIGGER_MAP;
+    if(triggerMap > 0 && triggerMap != lastSeenTriggerMap){
+      high(16);
+      pause(200);
+      low(16);
+      pause(100);
+    }
+    lastSeenTriggerMap = triggerMap;      
+  }  
+}  
+void testServo(){
+  int SERVO = 20;
+  unsigned int count = 0;
+  unsigned int clockSpeed = 12;
+  unsigned int highTime = 10800;
+  for(int index = 0; index < 120000; index++){
+    if(index % 2 == 0){
+      high(WHITE_LED);
+      pause(100);
+      low(WHITE_LED);
+      pause(100);
+    }      
+    if(count < highTime){
+      high(SERVO);
+    }
+    else{
+      low(SERVO);
+    }
+    count += 1;
+  }      
+}
+  
+void testProgram(){
+  int leds[] = { BLUE_LED,GREEN_LED, WHITE_LED, RED_LED};
+  int debugLeds[] = { DEBUG_LED_1, DEBUG_LED_2,DEBUG_LED_3,DEBUG_LED_4,DEBUG_LED_5,
+                      DEBUG_LED_6,DEBUG_LED_7,DEBUG_LED_8,DEBUG_LED_9,DEBUG_LED_10};
+  int debugLedsLength = 10;
+  int ledLength = 4;
+  high(RED_LASER);
+  for(int index=0; index < 40; index++){
+    high(index % ledLength);
+    for(int index2 = 0; index2 < index%debugLedsLength; index2++){
+      high(debugLeds[index2]);
+    }      
+    pause(100);
+    low(index % ledLength);
+    for(int index2 = 0; index2 < index%debugLedsLength; index2++){
+      low(debugLeds[index2]);
+    }       
+    pause(100);
+  }
+  
+  for(int index = 0; index < 48000; index++){
+    if(index % 2 == 0){
+      high(SPEAKER);
+    }
+    else{
+      low(SPEAKER);
+    }
+  }    
+  
+  for(int index = 0; index < 48000; index++){
+    if(input(MAGNETIC_REED) == 0){
+      high(BLUE_LED);
+    }
+    else{
+      low(BLUE_LED);
+    }                    
+    if(input(COLLISION_DETECTOR) == 0){
+      high(WHITE_LED);
+    }
+    else{
+      low(WHITE_LED);
+    }  
+  }
+  low(RED_LASER);
+}

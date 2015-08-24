@@ -8,11 +8,13 @@ sensors.h
 sensors.c
 effectors.c
 effectors.h
+cogDefinitions.c
+testFunctions.c
 >compiler=C
->memtype=cmm main ram compact
->optimize=-Os
+>memtype=lmm main ram
+>optimize=-O0
 >-m32bit-doubles
 >-fno-exceptions
 >defs::-std=c99
 >-lm
->BOARD::RCFAST
+>BOARD::QUICKSTART

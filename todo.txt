@@ -1,0 +1,18 @@
+Cognition
+- Read PerceptionMap
+- Send to external instructor or calculate motor and effector control
+- Write Effector Control
+- Write Motor Control
+
+Perception
+- Read input sensors
+- Generate Percept Map
+- Write percept map to memory
+
+Motor Control
+- Read N values from motor control if updated
+- Execute N values in sequence
+
+Effector Control
+- Read effector control if updated
+- execute effector control
