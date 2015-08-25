@@ -1,6 +1,8 @@
+#include "simpletools.h"
 #include "cogDefinitions.h"
 #include "effectors.h"
 #include "sensors.h"
+#include <string.h>
 
 int COG_0_STATE = 0;
 int COG_1_STATE = 0;
@@ -15,13 +17,18 @@ void NO_PROGRAM(){}
 
 void cog0Program(){}
 
+// Read the sensors and update the SENSOR_TRIGGER_MAP
+// to inform other cogs of a change in the environment
 void cog1Program(){
   unsigned int triggerMapUpdate = 0;
+  sensorInit();   
   while(1){
-    triggerMapUpdate = SENSOR_TRIGGER_MAP;
-    triggerMapUpdate |= serviceCollisionDetector();
-    triggerMapUpdate |= serviceReedSwitch();
+    triggerMapUpdate = 0;
+    for(int index = 0; index < SENSOR_LIST_SIZE; index++){
+      triggerMapUpdate |= SENSOR_LIST[index].serviceRoutine(); 
+    }
     SENSOR_TRIGGER_MAP = triggerMapUpdate;
+    //pause(75);
   }    
 }
   
@@ -32,7 +39,11 @@ void cog2Program(){
   while(1){
     triggerMap = SENSOR_TRIGGER_MAP;
     if(triggerMap > 0 && triggerMap != lastSeenTriggerMap){
-      
+        // Trigger effectors as desired based on SENSOR
+        high(21);
+        pause(50);
+        low(21);
+        pause(50);
     }
     lastSeenTriggerMap = triggerMap;      
   }    
@@ -43,6 +54,8 @@ void cog3Program(){}
 void cog4Program(){}
 void cog5Program(){}
 void cog6Program(){}
+void cog7Program(){}
+
 
 
 

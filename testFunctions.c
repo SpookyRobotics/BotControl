@@ -2,7 +2,27 @@
 #include "effectors.h"
 #include "sensors.h"
 #include "cogDefinitions.h"
+#include "testFunctions.h"
 
+Sensor DEBUG_SENSOR1 = {"MAG_REED",MAGNETIC_REED, &debugSensor1,0};
+Sensor DEBUG_SENSOR2 = {"COL_DETECT",COLLISION_DETECTOR, &debugSensor2,1};
+
+unsigned int debugSensor1(){
+  static int triggered = 0;
+  if(triggered == 0){
+    high(16);
+    triggered = 1;
+  }
+  else{
+    low(16);
+    triggered = 0;
+  } 
+  return triggered;       
+}
+
+unsigned int debugSensor2(){
+   return 0;  
+}
 
 void testComm1(){
   while(1){

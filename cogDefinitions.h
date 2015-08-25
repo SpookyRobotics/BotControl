@@ -5,13 +5,13 @@
 void testComm1();
 void testComm2();
 
-#define COG_0_PROGRAM testComm1
-#define COG_0_STACK_SIZE 15
+#define COG_0_PROGRAM cog1Program
+#define COG_0_STACK_SIZE 100
 #define COG_0_DEBUG_STACK_SIZE 70
 extern int COG_0_STATE;
 
-#define COG_1_PROGRAM testComm2
-#define COG_1_STACK_SIZE 15
+#define COG_1_PROGRAM cog2Program
+#define COG_1_STACK_SIZE 100
 #define COG_1_DEBUG_STACK_SIZE 5
 extern int COG_1_STATE;
 
@@ -54,6 +54,7 @@ void cog3Program();
 void cog4Program();
 void cog5Program();
 void cog6Program();
+void cog7Program();
 
 
 #endif

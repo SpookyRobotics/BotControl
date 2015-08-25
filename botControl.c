@@ -3,7 +3,7 @@
 #include "sensors.h"
 
 
-#define NULL_POINTER ( (void*) NULL)
+#define NULL_POINTER ( (int*) NULL)
 volatile unsigned int SENSOR_TRIGGER_MAP;
 
 int * cog0 = NULL_POINTER;
@@ -47,6 +47,6 @@ int main(){
   }
   
   if(COG_7_PROGRAM != NO_PROGRAM){
-    COG_7_PROGRAM();
+    COG_7_PROGRAM((void*) NULL);
   }                 
 }  
