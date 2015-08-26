@@ -1,10 +1,6 @@
 #ifndef COG_DEFINITIONS_HEADER
 #define COG_DEFINITIONS_HEADER
 
-
-void testComm1();
-void testComm2();
-
 #define COG_0_PROGRAM cog1Program
 #define COG_0_STACK_SIZE 200
 #define COG_0_DEBUG_STACK_SIZE 70
@@ -16,7 +12,7 @@ extern int COG_0_STATE;
 extern int COG_1_STATE;
 
 #define COG_2_PROGRAM NO_PROGRAM
-#define COG_2_STACK_SIZE 0
+#define COG_2_STACK_SIZE 200
 #define COG_2_DEBUG_STACK_SIZE 0
 extern int COG_2_STATE;
 

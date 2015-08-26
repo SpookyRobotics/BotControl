@@ -15,7 +15,12 @@ int COG_7_STATE = 0;
 
 void NO_PROGRAM(){}
 
-void cog0Program(){}
+void cog0Program(){
+  high(17);
+  pause(100);
+  low(17);
+  pause(100);
+}
 
 // Read the sensors and update the SENSOR_TRIGGER_MAP
 // to inform other cogs of a change in the environment
@@ -35,25 +40,28 @@ void cog1Program(){
 // Control all non Motor output
 void cog2Program(){
   unsigned int triggerMap = 0;
-  unsigned int lastSeenTriggerMap = 0;
   effectorsInit();
   while(1){
     triggerMap = SENSOR_TRIGGER_MAP;
-    /*if(triggerMap > 0 && triggerMap != lastSeenTriggerMap){
-      // Trigger effectors as desired based on triggerMap
-      for(int index=0; index < EFFECTOR_LIST_SIZE; index++){
-        EFFECTOR_LIST[index].serviceRoutine(triggerMap);
-      }          
-    }*/
     for(int index=0; index < EFFECTOR_LIST_SIZE; index++){
         EFFECTOR_LIST[index].serviceRoutine(triggerMap);
     }
-    lastSeenTriggerMap = triggerMap;      
   }    
 }
 
 // Control left and right motors
-void cog3Program(){} 
+void cog3Program(){
+  static int state = 0;
+  if(state == 1){
+    state = 0;
+    high(1);
+  }
+  else{
+    state = 1;
+    low(1);
+  }
+  pause(100);
+} 
 void cog4Program(){}
 void cog5Program(){}
 void cog6Program(){}

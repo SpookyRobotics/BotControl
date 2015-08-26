@@ -36,3 +36,54 @@ unsigned int sensorReset(Sensor sensor){
 	}
   return 0;
 }
+
+unsigned int debouncePinRead(unsigned int pinToRead){
+    int n = 16;
+    int result  = -1;       // Number of counts to declare high input
+    int reading =  0;
+    int pins = 1 << pinToRead;
+    while(n--){
+      reading = pins;        // reset mask
+      DIRA &= ~pins;         // switch to input
+      pause(2);              // wait for RC time
+      reading &= INA;        // mask desired pin with single pin states
+      if(reading > 0){       // accumulate count if pin is high
+        result += 1;          
+      }        
+    }
+    if(result > 0){
+      return 1;
+    }      
+    return 0;
+}
+
+unsigned int debounceReadInput(){
+    int n = 16;
+    int result = 0;
+    int assertHighCount  = -1;       // Number of counts to declare high input
+    int reading[16];
+    int pins = 0xFF;
+    for(int index =0; index < n; index++){
+      DIRA &= ~pins;         // switch to input
+      pause(2);              // wait for RC time
+      reading[index] = INA;  // read input register
+             
+    }
+    // For each bit, count the number of times set. If
+    // a pin is set more times than absolute value of assertHighCount
+    // mark as set in result
+    for(int index = 0; index < 32; index++){
+      int assertCount = assertHighCount;
+      int highMask = 1 << index;
+      for(int  index2 = 0; index2 < 16; index2++){
+        if(reading[index2] & highMask){
+          assertCount += 1;
+          if(assertCount > 0){
+            result |= 1 << index;
+            break;
+          }
+        }                      
+      }        
+    }      
+    return result;
+}

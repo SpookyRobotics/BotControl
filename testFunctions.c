@@ -9,14 +9,16 @@ Sensor DEBUG_SENSOR1 = {"MAG_REED",MAGNETIC_REED, &debugSensor1,0};
 Sensor DEBUG_SENSOR2 = {"COL_DETECT",COLLISION_DETECTOR, &debugSensor2,1};
 
 unsigned int debugSensor1(){
-  static int triggered = 0;
-  if(triggered == 0){
-    triggered = 1;
+  unsigned int result = debounceReadInput(); 
+  if(result & (1 << 7)){
+     high(23);
   }
-  else{
-    triggered = 0;
-  } 
-  return triggered;       
+  if(result & (1 << 6)){
+    high(22);
+  }
+  pause(100);
+  low(23);low(22);
+  pause(100);         
 }
 
 unsigned int debugSensor2(){
