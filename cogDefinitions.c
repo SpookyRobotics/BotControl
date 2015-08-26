@@ -28,7 +28,6 @@ void cog1Program(){
       triggerMapUpdate |= SENSOR_LIST[index].serviceRoutine(); 
     }
     SENSOR_TRIGGER_MAP = triggerMapUpdate;
-    //pause(75);
   }    
 }
   
@@ -36,14 +35,14 @@ void cog1Program(){
 void cog2Program(){
   unsigned int triggerMap = 0;
   unsigned int lastSeenTriggerMap = 0;
+  initEffectors();
   while(1){
     triggerMap = SENSOR_TRIGGER_MAP;
     if(triggerMap > 0 && triggerMap != lastSeenTriggerMap){
-        // Trigger effectors as desired based on SENSOR
-        high(21);
-        pause(50);
-        low(21);
-        pause(50);
+      // Trigger effectors as desired based on triggerMap
+      for(int index=0; index < EFFECTOR_LIST_SIZE; index++){
+        EFFECTOR_LIST[index].serviceRoutine(triggerMap);
+      }          
     }
     lastSeenTriggerMap = triggerMap;      
   }    

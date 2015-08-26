@@ -13,9 +13,9 @@ testFunctions.c
 testFunctions.h
 >compiler=C
 >memtype=lmm main ram
->optimize=-O0
+>optimize=-Os
 >-m32bit-doubles
 >-fno-exceptions
 >defs::-std=c99
 >-lm
->BOARD::QUICKSTART
+>BOARD::RCFAST
