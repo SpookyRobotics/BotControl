@@ -1,10 +1,8 @@
 #ifndef SENSORS_HEADER
 #define SENSORS_HEADER
 
-#define SENSOR_LIST_SIZE 2
-#define MAGNETIC_REED 5
-#define COLLISION_DETECTOR 6
-#define DEBUG_SENSOR 200
+#define SENSOR_LIST_SIZE 8
+#define SENSOR_PINS_SIZE 8
 
 typedef struct {
   char name[12];
@@ -14,15 +12,13 @@ typedef struct {
   
 } Sensor;
 
-extern Sensor MAGNETIC_REED_SENSOR; 
-extern Sensor COLLISION_DETECTOR_SENSOR;
+extern volatile unsigned int SENSOR_TRIGGER_MAP;
 extern Sensor SENSOR_LIST[];
+extern int SENSOR_PINS[SENSOR_PINS_SIZE];
+
 
 unsigned int validSensor(unsigned int sensorPin);
 unsigned int sensorTriggered(Sensor sensor);
 unsigned int sensorReset(Sensor sensor);
-
-unsigned int serviceCollisionDetector();
-unsigned int serviceReedSwitch();
-void sensorInit();
+void sensorsInit();
 #endif

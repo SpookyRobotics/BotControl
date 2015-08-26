@@ -11,6 +11,10 @@ effectors.h
 cogDefinitions.c
 testFunctions.c
 testFunctions.h
+breadboardConfig.c
+breadboardConfig.h
+quickstartConfig.c
+quickstartConfig.h
 >compiler=C
 >memtype=lmm main ram
 >optimize=-Os

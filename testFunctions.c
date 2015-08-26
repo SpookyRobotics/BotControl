@@ -3,6 +3,7 @@
 #include "sensors.h"
 #include "cogDefinitions.h"
 #include "testFunctions.h"
+#include "breadboardConfig.h"
 
 Sensor DEBUG_SENSOR1 = {"MAG_REED",MAGNETIC_REED, &debugSensor1,0};
 Sensor DEBUG_SENSOR2 = {"COL_DETECT",COLLISION_DETECTOR, &debugSensor2,1};

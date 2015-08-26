@@ -21,7 +21,8 @@ void cog0Program(){}
 // to inform other cogs of a change in the environment
 void cog1Program(){
   unsigned int triggerMapUpdate = 0;
-  sensorInit();   
+  SENSOR_TRIGGER_MAP = 0;
+  sensorsInit();   
   while(1){
     triggerMapUpdate = 0;
     for(int index = 0; index < SENSOR_LIST_SIZE; index++){
@@ -35,14 +36,17 @@ void cog1Program(){
 void cog2Program(){
   unsigned int triggerMap = 0;
   unsigned int lastSeenTriggerMap = 0;
-  initEffectors();
+  effectorsInit();
   while(1){
     triggerMap = SENSOR_TRIGGER_MAP;
-    if(triggerMap > 0 && triggerMap != lastSeenTriggerMap){
+    /*if(triggerMap > 0 && triggerMap != lastSeenTriggerMap){
       // Trigger effectors as desired based on triggerMap
       for(int index=0; index < EFFECTOR_LIST_SIZE; index++){
         EFFECTOR_LIST[index].serviceRoutine(triggerMap);
       }          
+    }*/
+    for(int index=0; index < EFFECTOR_LIST_SIZE; index++){
+        EFFECTOR_LIST[index].serviceRoutine(triggerMap);
     }
     lastSeenTriggerMap = triggerMap;      
   }    
