@@ -1,11 +1,7 @@
 #ifndef EFFECTORS_HEADER
 #define EFFECTORS_HEADER
 
-
-
-#define EFFECTOR_LIST_SIZE 1
-#define EFFECTOR_PINS_SIZE 8
-
+#include "config.h"
 
 typedef struct {
   char name[12];
@@ -14,7 +10,7 @@ typedef struct {
   void (*serviceRoutine)(unsigned int); 
 } Effector;
 
- 
+
 extern int EFFECTOR_PINS[];
 extern Effector EFFECTOR_LIST[EFFECTOR_LIST_SIZE];
 

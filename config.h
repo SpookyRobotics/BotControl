@@ -1,0 +1,13 @@
+#ifndef CONFIG_HEADER
+#define CONFIG_HEADER
+
+#define SENSOR_LIST_SIZE 2
+#define SENSOR_PINS_SIZE 2
+
+#define EFFECTOR_LIST_SIZE 7
+#define EFFECTOR_PINS_SIZE 16
+
+#define TIMER_COG_OFFSET_TICKS 20
+
+#define TIMER_COG_SLOTS 4
+#endif

@@ -15,6 +15,7 @@ breadboardConfig.c
 breadboardConfig.h
 quickstartConfig.c
 quickstartConfig.h
+config.h
 >compiler=C
 >memtype=lmm main ram
 >optimize=-Os

@@ -1,8 +1,7 @@
 #ifndef SENSORS_HEADER
 #define SENSORS_HEADER
 
-#define SENSOR_LIST_SIZE 8
-#define SENSOR_PINS_SIZE 8
+#include "config.h"
 
 typedef struct {
   char name[12];
