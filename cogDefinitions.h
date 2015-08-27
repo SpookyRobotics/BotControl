@@ -1,9 +1,10 @@
 #ifndef COG_DEFINITIONS_HEADER
 #define COG_DEFINITIONS_HEADER
+#define TIMER_COG_PROGRAM timerCogProgram
 
 #include "config.h"
 
-#define COG_0_PROGRAM cog0Program
+#define COG_0_PROGRAM TIMER_COG_PROGRAM
 #define COG_0_STACK_SIZE 200
 #define COG_0_DEBUG_STACK_SIZE 70
 extern int COG_0_STATE;

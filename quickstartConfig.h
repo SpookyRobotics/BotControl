@@ -53,7 +53,7 @@ unsigned int serviceTouch7();
 
 /**
  * Begin Synchronized timer functions 
- * */
+ */
 
 void initSynchronizedTimerFunctions();
 

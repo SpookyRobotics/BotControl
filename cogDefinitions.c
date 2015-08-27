@@ -15,9 +15,7 @@ int COG_7_STATE = 0;
 
 void NO_PROGRAM(){}
 
-// Timer Cog for synchronous output 
 void cog0Program(){
-  timerCogProgram();
 }
 
   

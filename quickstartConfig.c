@@ -9,7 +9,7 @@
 #define SENSOR_LIST_SIZE 8
 #define SENSOR_PINS_SIZE 8
 #define EFFECTOR_LIST_SIZE 1
-#define EFFECTOR_PINS_SIZE 8*/
+#define EFFECTOR_PINS_SIZE 8
 
 int EFFECTOR_PINS[] = {LED0,LED1,LED2,LED3,LED4,LED5,LED6,LED7};
 int SENSOR_PINS[] = {TOUCH0,TOUCH1,TOUCH2,TOUCH3,TOUCH4,TOUCH5,TOUCH6,TOUCH7};
@@ -27,6 +27,13 @@ void sensorsInit(){
 
 void effectorsInit(){
   EFFECTOR_LIST[0] = leds;
+}
+
+// Begin Synchronous Timed functions
+
+void initSynchronizedTimerFunctions(){
+  TIMER_COG_FUNCTIONS[0] = blinkLed;
+  TIMER_COG_FUNCTIONS[1] = blinkLed2;
 }
 
 /* End Startup */
@@ -132,9 +139,3 @@ unsigned int serviceTouch7(){
   }     
 } 
 
-/* Begin Synchronous Timed functions */
-
-void initSynchronizedTimerFunctions(){
-  TIMER_COG_FUNCTIONS[0] = blinkLed;
-  TIMER_COG_FUNCTIONS[1] = blinkLed2;
-}

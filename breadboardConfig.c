@@ -7,7 +7,7 @@
 #define SENSOR_PINS_SIZE 2
 
 #define EFFECTOR_LIST_SIZE 7
-#define EFFECTOR_PINS_SIZE 16
+#define EFFECTOR_PINS_SIZE 16*/
 
 
 
@@ -45,6 +45,7 @@ void effectorsInit(){
 }
 
 
+void initSynchronizedTimerFunctions(){}
 
  /* End Startup */
 

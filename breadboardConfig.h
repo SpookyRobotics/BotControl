@@ -58,4 +58,10 @@ extern Sensor COLLISION_DETECTOR_SENSOR;
 unsigned int serviceCollisionDetector();
 unsigned int serviceReedSwitch();
 
+/**
+ * Begin Synchronized timer functions 
+ */
+
+void initSynchronizedTimerFunctions();
+
 #endif
