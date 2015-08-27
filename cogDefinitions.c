@@ -17,37 +17,11 @@ void NO_PROGRAM(){}
 
 // Timer Cog for synchronous output 
 void cog0Program(){
-  high(17);
-  pause(100);
-  low(17);
-  pause(100);
+  timerCogProgram();
 }
 
-typedef struct {
-  unsigned int count;
-  unsigned int startCount;
-  char repeat;
-  void (*timedFunction)();
-} TimedFunctionEntry;
   
-TimedFunctionEntry TIMER_COG_FUNCTIONS[TIMER_COG_SLOTS];
-void timerCogProgram(){
-  while(1){
-    for(int index =0; index < TIMER_COG_SLOTS; index++){
-      TimedFunctionEntry timedFunctionEntry = TIMER_COG_FUNCTIONS[index];
-      if(timedFunctionEntry.count >= 0){
-        timedFunctionEntry.count -= 1;
-        if(timedFunctionEntry.count == 0){
-          timedFunctionEntry.timedFunction();  
-          if(timedFunctionEntry.repeat){
-            timedFunctionEntry.count = timedFunctionEntry.startCount;
-          }
-        }
-      }        
-    }      
-    pause(TIMER_COG_OFFSET_TICKS);
-  }    
-}  
+  
 // Read the sensors and update the SENSOR_TRIGGER_MAP
 // to inform other cogs of a change in the environment
 void cog1Program(){

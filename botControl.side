@@ -16,6 +16,8 @@ breadboardConfig.h
 quickstartConfig.c
 quickstartConfig.h
 config.h
+synchronousTimer.h
+synchronousTimer.c
 >compiler=C
 >memtype=lmm main ram
 >optimize=-Os

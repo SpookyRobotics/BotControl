@@ -8,6 +8,11 @@
 Sensor DEBUG_SENSOR1 = {"MAG_REED",MAGNETIC_REED, &debugSensor1,0};
 Sensor DEBUG_SENSOR2 = {"COL_DETECT",COLLISION_DETECTOR, &debugSensor2,1};
 
+TimedFunctionEntry blinkLed = {9,1,&blinkLed1};
+TimedFunctionEntry blinkLed2 = {3,1,&blinkLed0};
+
+
+  
 unsigned int debugSensor1(){
   unsigned int result = debounceReadInput(); 
   if(result & (1 << 7)){
@@ -115,4 +120,28 @@ void testProgram(){
     }  
   }
   low(RED_LASER);
+}
+
+void blinkLed1(){
+  static int state = 0;
+  if(state){
+    state = 0;
+    high(23);
+  }
+  else{
+    state = 1;
+    low(23);
+  }        
+}  
+
+void blinkLed0(){
+  static int state = 0;
+  if(state){
+    state = 0;
+    high(22);
+  }
+  else{
+    state = 1;
+    low(22);
+  }        
 }

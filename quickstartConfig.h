@@ -51,5 +51,11 @@ unsigned int serviceTouch5();
 unsigned int serviceTouch6();
 unsigned int serviceTouch7();
 
+/**
+ * Begin Synchronized timer functions 
+ * */
+
+void initSynchronizedTimerFunctions();
+
 
 #endif
