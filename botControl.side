@@ -1,9 +1,5 @@
 botControl.c
-debuggingCog.c
-debuggingCog.h
 cogDefinitions.h
-debugLedDisplay.c
-debugLedDisplay.h
 sensors.h
 sensors.c
 effectors.c
