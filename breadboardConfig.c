@@ -33,15 +33,16 @@ void sensorsInit(){
   SENSOR_LIST[0] = MAGNETIC_REED_SENSOR;
   SENSOR_LIST[1] = COLLISION_DETECTOR_SENSOR;
 }
-
+int redLaserPins[];
 void effectorsInit(){
+  high(redLaserPins[0]);
   EFFECTOR_LIST[0] = BlueLed;
   EFFECTOR_LIST[1] = GreenLed;
-  EFFECTOR_LIST[2] = WhiteLed;
+  EFFECTOR_LIST[2] = DebugLeds;
   EFFECTOR_LIST[3] = RedLed;
   EFFECTOR_LIST[4] = RedLaser;
   EFFECTOR_LIST[5] = Speaker;
-  EFFECTOR_LIST[6] = DebugLeds;
+  EFFECTOR_LIST[6] = WhiteLed;
 }
 
 
@@ -116,6 +117,14 @@ Sensor COLLISION_DETECTOR_SENSOR = {"COL_DETECT",COLLISION_DETECTOR, &serviceCol
 unsigned int serviceCollisionDetector(){
   int value = input(COLLISION_DETECTOR);
   if(value == 0){
+    for(int index = 0; index < 2000; index++){
+         if(index %5 == 0){
+           high(speakerPins[0]);
+         }
+         else{
+           low(speakerPins[0]);
+         }                      
+      } 
     return sensorTriggered(COLLISION_DETECTOR_SENSOR);  
   }
   else{
@@ -126,6 +135,14 @@ unsigned int serviceCollisionDetector(){
 unsigned int serviceReedSwitch(){
   int value = input(MAGNETIC_REED);
   if(value == 0){
+      for(int index = 0; index < 2000; index++){
+         if(index %7 == 0){
+           high(speakerPins[0]);
+         }
+         else{
+           low(speakerPins[0]);
+         }                      
+      }        
       return sensorTriggered(MAGNETIC_REED_SENSOR);  
   }
   else{

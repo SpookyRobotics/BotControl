@@ -4,12 +4,12 @@
 
 #include "config.h"
 
-#define COG_0_PROGRAM TIMER_COG_PROGRAM
+#define COG_0_PROGRAM cog1Program
 #define COG_0_STACK_SIZE 200
 #define COG_0_DEBUG_STACK_SIZE 70
 extern int COG_0_STATE;
 
-#define COG_1_PROGRAM NO_PROGRAM
+#define COG_1_PROGRAM cog2Program
 #define COG_1_STACK_SIZE 200
 #define COG_1_DEBUG_STACK_SIZE 5
 extern int COG_1_STATE;

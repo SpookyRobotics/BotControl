@@ -15,8 +15,7 @@ int COG_7_STATE = 0;
 
 void NO_PROGRAM(){}
 
-void cog0Program(){
-}
+void cog0Program(){}
 
   
   
@@ -47,19 +46,7 @@ void cog2Program(){
   }    
 }
 
-// Control left and right motors
-void cog3Program(){
-  static int state = 0;
-  if(state == 1){
-    state = 0;
-    high(1);
-  }
-  else{
-    state = 1;
-    low(1);
-  }
-  pause(100);
-} 
+void cog3Program(){} 
 void cog4Program(){}
 void cog5Program(){}
 void cog6Program(){}
