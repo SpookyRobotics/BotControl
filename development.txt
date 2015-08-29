@@ -1,0 +1,20 @@
+Since college, I have not had the chance to program any embedded systems I fully understood. After spending five years at Carnegie Mellon building prototypes of circuits studied in class, or theorizing on the best course of operation for a controls system, I was glad to get an Android programming job and not have to worry about the hardware model of my system. I would still self identify as a C programmer, and would daydream about embedding native code into my Android applications. For the most part I resigned myself to read C code, and live in the JVM world.
+
+This complacency was dispelled after a walk in MicroCenter. I have a MicroCenter addiction. I can wonder the aisles of the microcontrollers, sensors, and chips coming up with new designs on how to solve a problem, or how to build a special purpose embedded system. On two of the shelves were packages that screamed I must buy you. They were the following: 
+
+[image: sensors_kit] [image: parallax microcontroller]
+
+I bought these items, with the purpose of determining what generic system I could build for under $100.
+
+I did not realize that I had bought a 3.3V I/O compatible microcontroller, and 5V sensors. Hence my part list soon grew to this in total:
+
+[parts list]
+
+The Parallax micocontroller is completely open source, and hence I deemed it only appropriate for me to open source this code base, and document my experience in learning a new architecture. With 8 cogs, each able to run a separate program, I decided to build a framework that would allow maximum uses of the processors I/O, with minimum usage of the 8 cogs. The resulting application would need to be easily modifiable to adjust to changes in environment. The entire application should fit in under 11Kb of memory, which is 1/3 of the onboard ram for the processor. 
+
+The resulting BotControl application:
+Uses 2 cogs, one for control of all input channels and one for control of all output channels.
+Can optionally use a third cog for scheduling functions to run at a given frequency
+With the hardware configuration files for 2 circuit, fits in under 10Kb of memory
+
+ 
