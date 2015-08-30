@@ -15,7 +15,10 @@ int COG_7_STATE = 0;
 
 void NO_PROGRAM(){}
 
-void cog0Program(){}
+void cog0Program(){
+     timerCogProgram();
+      
+}
 
   
   

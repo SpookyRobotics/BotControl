@@ -8,7 +8,7 @@
 Sensor DEBUG_SENSOR1 = {"MAG_REED",MAGNETIC_REED, &debugSensor1,0};
 Sensor DEBUG_SENSOR2 = {"COL_DETECT",COLLISION_DETECTOR, &debugSensor2,1};
 
-TimedFunctionEntry blinkLed = {9,1,&blinkLed1};
+TimedFunctionEntry blinkLed = {3,1,&blinkLed1};
 TimedFunctionEntry blinkLed2 = {3,1,&blinkLed0};
 
 
