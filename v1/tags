@@ -1,0 +1,153 @@
+!_TAG_FILE_FORMAT	1	/original ctags format/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BLUE_LED	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	4
+BlueLed	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^Effector BlueLed = {"BlueLed",1,blueLedPins,&serviceBlueLed};$/
+COG_0_DEBUG_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	10
+COG_0_PROGRAM	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	8
+COG_0_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	9
+COG_0_STATE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^int COG_0_STATE = 0;$/
+COG_1_DEBUG_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	15
+COG_1_PROGRAM	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	13
+COG_1_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	14
+COG_1_STATE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^int COG_1_STATE = 0;$/
+COG_2_DEBUG_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	20
+COG_2_PROGRAM	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	18
+COG_2_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	19
+COG_2_STATE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^int COG_2_STATE = 0;$/
+COG_3_DEBUG_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	25
+COG_3_PROGRAM	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	23
+COG_3_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	24
+COG_3_STATE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^int COG_3_STATE = 0;$/
+COG_4_DEBUG_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	30
+COG_4_PROGRAM	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	28
+COG_4_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	29
+COG_4_STATE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^int COG_4_STATE = 0;$/
+COG_5_DEBUG_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	35
+COG_5_PROGRAM	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	33
+COG_5_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	34
+COG_5_STATE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^int COG_5_STATE = 0;$/
+COG_6_DEBUG_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	40
+COG_6_PROGRAM	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	38
+COG_6_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	39
+COG_6_STATE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^int COG_6_STATE = 0;$/
+COG_7_DEBUG_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	45
+COG_7_PROGRAM	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	43
+COG_7_STACK_SIZE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	44
+COG_7_STATE	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^int COG_7_STATE = 0;$/
+COG_DEFINITIONS_HEADER	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.h	2
+COLLISION_DETECTOR	/home/spooky/SoftwareDevelopment/BotControl/sensors.h	6
+COLLISION_DETECTOR_SENSOR	/home/spooky/SoftwareDevelopment/BotControl/sensors.c	/^Sensor COLLISION_DETECTOR_SENSOR = {"COL_DETECT",COLLISION_DETECTOR, &serviceCollisionDetector,1};$/
+DEBUG	/home/spooky/SoftwareDevelopment/BotControl/debuggingCog.c	8
+DEBUGGING_COG_H	/home/spooky/SoftwareDevelopment/BotControl/debuggingCog.h	2
+DEBUG_LED_1	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	11
+DEBUG_LED_10	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	20
+DEBUG_LED_2	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	12
+DEBUG_LED_3	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	13
+DEBUG_LED_4	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	14
+DEBUG_LED_5	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	15
+DEBUG_LED_6	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	16
+DEBUG_LED_7	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	17
+DEBUG_LED_8	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	18
+DEBUG_LED_9	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	19
+DEBUG_LED_DISPLAY_HEADER	/home/spooky/SoftwareDevelopment/BotControl/debugLedDisplay.h	2
+DEBUG_SENSOR	/home/spooky/SoftwareDevelopment/BotControl/sensors.h	7
+DEBUG_SENSOR1	/home/spooky/SoftwareDevelopment/BotControl/testFunctions.c	/^Sensor DEBUG_SENSOR1 = {"MAG_REED",MAGNETIC_REED, &debugSensor1,0};$/
+DEBUG_SENSOR2	/home/spooky/SoftwareDevelopment/BotControl/testFunctions.c	/^Sensor DEBUG_SENSOR2 = {"COL_DETECT",COLLISION_DETECTOR, &debugSensor2,1};$/
+DebugLeds	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^Effector DebugLeds = {"DebugLeds",10,debugLedPins,&serviceDebugLeds};$/
+EFFECTORS_HEADER	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	2
+EFFECTOR_LIST	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^Effector EFFECTOR_LIST[]; $/
+EFFECTOR_LIST_SIZE	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	22
+EFFECTOR_PINS	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^int EFFECTOR_PINS[] = {BLUE_LED,$/
+EFFECTOR_PINS_SIZE	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	23
+Effector	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	/^} Effector;$/
+GREEN_LED	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	5
+GreenLed	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^Effector GreenLed = {"GreenLed",1,greenLedPins,&serviceGreenLed};$/
+MAGNETIC_REED	/home/spooky/SoftwareDevelopment/BotControl/sensors.h	5
+MAGNETIC_REED_SENSOR	/home/spooky/SoftwareDevelopment/BotControl/sensors.c	/^Sensor MAGNETIC_REED_SENSOR = {"MAG_REED",MAGNETIC_REED, &serviceReedSwitch,0};$/
+NO_PROGRAM	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^void NO_PROGRAM(){}$/
+NULL_POINTER	/home/spooky/SoftwareDevelopment/BotControl/botControl.c	6
+RED_LASER	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	8
+RED_LED	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	7
+RedLaser	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^Effector RedLaser = {"RedLaser",1,redLaserPins,&serviceRedLaser};$/
+RedLed	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^Effector RedLed = {"RedLed",1,redLedPins,&serviceRedLed};$/
+SENSORS_HEADER	/home/spooky/SoftwareDevelopment/BotControl/sensors.h	2
+SENSOR_LIST	/home/spooky/SoftwareDevelopment/BotControl/sensors.c	/^Sensor SENSOR_LIST[SENSOR_LIST_SIZE];$/
+SENSOR_LIST_SIZE	/home/spooky/SoftwareDevelopment/BotControl/sensors.h	4
+SENSOR_TRIGGER_MAP	/home/spooky/SoftwareDevelopment/BotControl/botControl.c	/^volatile unsigned int SENSOR_TRIGGER_MAP;$/
+SERVO1	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	10
+SPEAKER	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	9
+Sensor	/home/spooky/SoftwareDevelopment/BotControl/sensors.h	/^} Sensor;$/
+Speaker	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^Effector Speaker = {"Speaker",1,speakerPins,&serviceSpeaker};$/
+TEST_FUNCTIONS_HEADER	/home/spooky/SoftwareDevelopment/BotControl/testFunctions.h	2
+WHITE_LED	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	6
+WhiteLed	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^Effector WhiteLed = {"WhiteLed",1,whiteLedPins,&serviceWhiteLed};$/
+blueLedPins	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^int blueLedPins[] = {BLUE_LED};$/
+clearLeds	/home/spooky/SoftwareDevelopment/BotControl/debugLedDisplay.c	/^void clearLeds(){$/
+cog0	/home/spooky/SoftwareDevelopment/BotControl/botControl.c	/^int * cog0 = NULL_POINTER;$/
+cog0Program	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^void cog0Program(){}$/
+cog1	/home/spooky/SoftwareDevelopment/BotControl/botControl.c	/^int * cog1 = NULL_POINTER;$/
+cog1Program	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^void cog1Program(){$/
+cog2	/home/spooky/SoftwareDevelopment/BotControl/botControl.c	/^int * cog2 = NULL_POINTER;$/
+cog2Program	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^void cog2Program(){$/
+cog3	/home/spooky/SoftwareDevelopment/BotControl/botControl.c	/^int * cog3 = NULL_POINTER;$/
+cog3Program	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^void cog3Program(){} $/
+cog4	/home/spooky/SoftwareDevelopment/BotControl/botControl.c	/^int * cog4 = NULL_POINTER;$/
+cog4Program	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^void cog4Program(){}$/
+cog5	/home/spooky/SoftwareDevelopment/BotControl/botControl.c	/^int * cog5 = NULL_POINTER;$/
+cog5Program	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^void cog5Program(){}$/
+cog6	/home/spooky/SoftwareDevelopment/BotControl/botControl.c	/^int * cog6 = NULL_POINTER;$/
+cog6Program	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^void cog6Program(){}$/
+cog7	/home/spooky/SoftwareDevelopment/BotControl/botControl.c	/^int * cog7 = NULL_POINTER;$/
+cog7Program	/home/spooky/SoftwareDevelopment/BotControl/cogDefinitions.c	/^void cog7Program(){}$/
+debugLedPins	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^int debugLedPins[] = {DEBUG_LED_1,DEBUG_LED_2,DEBUG_LED_3,$/
+debugPrint	/home/spooky/SoftwareDevelopment/BotControl/debuggingCog.c	/^void debugPrint(char* string , int num, ...){$/
+debugSensor1	/home/spooky/SoftwareDevelopment/BotControl/testFunctions.c	/^unsigned int debugSensor1(){$/
+debugSensor2	/home/spooky/SoftwareDevelopment/BotControl/testFunctions.c	/^unsigned int debugSensor2(){$/
+debuggingCogMain	/home/spooky/SoftwareDevelopment/BotControl/debuggingCog.c	/^void debuggingCogMain(){$/
+displayCogBeingQueried	/home/spooky/SoftwareDevelopment/BotControl/debugLedDisplay.c	/^void displayCogBeingQueried(unsigned int cogToDisplay){$/
+displayCogState	/home/spooky/SoftwareDevelopment/BotControl/debugLedDisplay.c	/^void displayCogState(int cogToDisplay){$/
+displayHexDigit	/home/spooky/SoftwareDevelopment/BotControl/debugLedDisplay.c	/^void displayHexDigit(int bit0Led, char hexDigit){$/
+displayOnLeds	/home/spooky/SoftwareDevelopment/BotControl/debugLedDisplay.c	/^void displayOnLeds(unsigned int cogToDisplay){$/
+getLedPort	/home/spooky/SoftwareDevelopment/BotControl/debugLedDisplay.c	/^int getLedPort(int led){$/
+greenLedPins	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^int greenLedPins[] = {GREEN_LED};$/
+handleInputs	/home/spooky/SoftwareDevelopment/BotControl/debuggingCog.c	/^void handleInputs(unsigned int * states){$/
+initEffectors	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^void initEffectors(){$/
+main	/home/spooky/SoftwareDevelopment/BotControl/botControl.c	/^int main(){ $/
+name	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	/^  char name[12];$/
+name	/home/spooky/SoftwareDevelopment/BotControl/sensors.h	/^  char name[12];$/
+pinNumber	/home/spooky/SoftwareDevelopment/BotControl/sensors.h	/^  int pinNumber;$/
+pinNumberSize	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	/^  int pinNumberSize;$/
+pinNumbers	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	/^  int * pinNumbers;$/
+readTouchButtons	/home/spooky/SoftwareDevelopment/BotControl/debuggingCog.c	/^void readTouchButtons(unsigned int * states){$/
+redLaserPins	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^int redLaserPins[] = {RED_LASER};$/
+redLedPins	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^int redLedPins[] = {RED_LED};$/
+sensorInit	/home/spooky/SoftwareDevelopment/BotControl/sensors.c	/^void sensorInit(){$/
+sensorMapBit	/home/spooky/SoftwareDevelopment/BotControl/sensors.h	/^  unsigned int sensorMapBit;$/
+sensorReset	/home/spooky/SoftwareDevelopment/BotControl/sensors.c	/^unsigned int sensorReset(Sensor sensor){$/
+sensorTriggered	/home/spooky/SoftwareDevelopment/BotControl/sensors.c	/^unsigned int sensorTriggered(Sensor sensor){$/
+serviceBlueLed	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^void serviceBlueLed(unsigned int effectorMap){}$/
+serviceCollisionDetector	/home/spooky/SoftwareDevelopment/BotControl/sensors.c	/^unsigned int serviceCollisionDetector(){$/
+serviceDebugLeds	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^void serviceDebugLeds(unsigned int effectorMap){}$/
+serviceGreenLed	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^void serviceGreenLed(unsigned int effectorMap){}$/
+serviceRedLaser	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^void serviceRedLaser(unsigned int effectorMap){}$/
+serviceRedLed	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^void serviceRedLed(unsigned int effectorMap){}$/
+serviceReedSwitch	/home/spooky/SoftwareDevelopment/BotControl/sensors.c	/^unsigned int serviceReedSwitch(){$/
+serviceRoutine	/home/spooky/SoftwareDevelopment/BotControl/effectors.h	/^  void (*serviceRoutine)(unsigned int); $/
+serviceRoutine	/home/spooky/SoftwareDevelopment/BotControl/sensors.h	/^  unsigned int (*serviceRoutine)();$/
+serviceSpeaker	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^void serviceSpeaker(unsigned int effectorMap){}$/
+serviceWhiteLed	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^void serviceWhiteLed(unsigned int effectorMap){}$/
+speakerPins	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^int speakerPins[] = {SPEAKER};$/
+testComm1	/home/spooky/SoftwareDevelopment/BotControl/testFunctions.c	/^void testComm1(){$/
+testComm2	/home/spooky/SoftwareDevelopment/BotControl/testFunctions.c	/^void testComm2(){$/
+testProgram	/home/spooky/SoftwareDevelopment/BotControl/testFunctions.c	/^void testProgram(){$/
+testServo	/home/spooky/SoftwareDevelopment/BotControl/testFunctions.c	/^void testServo(){$/
+togglePins	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^void togglePins(unsigned int sensors[], unsigned int sensorsLength,unsigned int onTimeMs, unsigned int offTimeMs){$/
+turnLedOff	/home/spooky/SoftwareDevelopment/BotControl/debugLedDisplay.c	/^void turnLedOff(int led) {$/
+turnLedOn	/home/spooky/SoftwareDevelopment/BotControl/debugLedDisplay.c	/^void turnLedOn(int led) {$/
+validEffector	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^int validEffector(unsigned int sensorPin){$/
+validSensor	/home/spooky/SoftwareDevelopment/BotControl/sensors.c	/^unsigned int validSensor(unsigned int sensorPin){$/
+whiteLedPins	/home/spooky/SoftwareDevelopment/BotControl/effectors.c	/^int whiteLedPins[] = {WHITE_LED};$/
