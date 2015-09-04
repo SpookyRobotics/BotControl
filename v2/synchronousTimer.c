@@ -1,12 +1,11 @@
 #include "synchronousTimer.h"
 
 TimedFunctionEntry TIMER_COG_FUNCTIONS[TIMER_COG_SLOTS];
-void timerCogProgram(){
-  initSynchronizedTimerFunctions();
+void timerCogProgram(){  
   int functionCounts[TIMER_COG_SLOTS];
   for(int index =0; index < TIMER_COG_SLOTS; index++){
     functionCounts[index] = TIMER_COG_FUNCTIONS[index].startCount;
-  }    
+  }
   while(1){
     for(int index =0; index < TIMER_COG_SLOTS; index++){      
       functionCounts[index] -= 1;        

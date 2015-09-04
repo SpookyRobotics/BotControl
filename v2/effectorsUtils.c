@@ -1,5 +1,14 @@
 #include "effectorsUtils.h"
 
+void startEffectorHandlerLoop(){
+  unsigned int triggerMap = 0;
+  while(1){
+    triggerMap = SENSOR_TRIGGER_MAP;
+    for(int index=0; index < EFFECTOR_LIST_SIZE; index++){
+        EFFECTOR_LIST[index].serviceRoutine(triggerMap);
+    }
+  }    
+}
 
 
 void defaultEffectorService(int pinState, int * pins, int pinsLength){

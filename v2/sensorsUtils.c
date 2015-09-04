@@ -2,7 +2,7 @@
 
 void startSensorHandlerLoop(){
   while(1){
-    triggerMapUpdate = 0;
+    unsigned int triggerMapUpdate = 0;
     for(int index = 0; index < SENSOR_LIST_SIZE; index++){
       triggerMapUpdate |= SENSOR_LIST[index].serviceRoutine(); 
     }

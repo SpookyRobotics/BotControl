@@ -1,6 +1,7 @@
 #ifndef EFFECTORS__UTILS_HEADER
 #define EFFECTORS_UTILS_HEADER
 #include "simpletools.h"
+#include "sensorsUtils.h"
 
 #define EFFECTOR_LIST_SIZE 0
 #define EFFECTOR_PINS_SIZE 8
