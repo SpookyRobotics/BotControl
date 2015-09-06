@@ -5,10 +5,18 @@ synchronousTimer.c
 effectorsUtils.h
 sensorsUtils.h
 synchronousTimer.h
+breadboardConfig.c
+quickstartConfig.c
+breadboardConfig.h
+quickstartConfig.h
+main.h
 >compiler=C
 >memtype=lmm main ram
 >optimize=-Os
 >-m32bit-doubles
+>-Wall
 >-fno-exceptions
->defs::-std=c99
->BOARD::ACTIVITYBOARD
+>-enable_pruning
+>defs::-std=c99 -save-temps
+>-ltiny
+>BOARD::RCFAST

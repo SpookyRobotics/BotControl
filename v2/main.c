@@ -1,5 +1,5 @@
-#include "sensorsUtils.h"
-#include "effectorsUtils.h"
+#include "simpletools.h"
+#include "main.h"
 
 volatile unsigned int SENSOR_TRIGGER_MAP;
 Sensor SENSOR_LIST[SENSOR_LIST_SIZE];
@@ -10,17 +10,21 @@ Effector EFFECTOR_LIST[EFFECTOR_LIST_SIZE];
 // Read the sensors and update the SENSOR_TRIGGER_MAP
 // to inform other cogs of a change in the environment
 void cog1Program(){
-  unsigned int triggerMapUpdate = 0;
   SENSOR_TRIGGER_MAP = 0;
-  startSensorHandlerLoop();
+  SENSORS_INIT(); 
+  startSensorHandlerLoop(&SENSOR_TRIGGER_MAP);
 }
 
 
 
 // Control all non Motor output
 void cog2Program(){
-  unsigned int triggerMap = 0;
-  startEffectorHandlerLoop();    
+  EFFECTORS_INIT();
+  startEffectorHandlerLoop(&SENSOR_TRIGGER_MAP);    
 }
 
-void main(){}
+int main(){
+  //cog_run(&cog1Program,100);
+  cog_run(&cog2Program,100); 
+  return 0;
+}

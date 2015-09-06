@@ -1,12 +1,12 @@
 #include "sensorsUtils.h"
 
-void startSensorHandlerLoop(){
+void startSensorHandlerLoop(volatile unsigned int * sensorTriggerMap){
   while(1){
     unsigned int triggerMapUpdate = 0;
     for(int index = 0; index < SENSOR_LIST_SIZE; index++){
       triggerMapUpdate |= SENSOR_LIST[index].serviceRoutine(); 
     }
-    SENSOR_TRIGGER_MAP = triggerMapUpdate;
+    *sensorTriggerMap = triggerMapUpdate;
   } 
 }
 

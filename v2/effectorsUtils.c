@@ -1,9 +1,9 @@
 #include "effectorsUtils.h"
 
-void startEffectorHandlerLoop(){
+void startEffectorHandlerLoop(volatile unsigned int * sensorTriggerMap){
   unsigned int triggerMap = 0;
   while(1){
-    triggerMap = SENSOR_TRIGGER_MAP;
+    triggerMap = *sensorTriggerMap;
     for(int index=0; index < EFFECTOR_LIST_SIZE; index++){
         EFFECTOR_LIST[index].serviceRoutine(triggerMap);
     }

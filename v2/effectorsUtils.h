@@ -1,7 +1,7 @@
 #ifndef EFFECTORS__UTILS_HEADER
 #define EFFECTORS_UTILS_HEADER
+
 #include "simpletools.h"
-#include "sensorsUtils.h"
 
 #define EFFECTOR_LIST_SIZE 0
 #define EFFECTOR_PINS_SIZE 8
@@ -18,7 +18,7 @@ extern int EFFECTOR_PINS[];
 extern Effector EFFECTOR_LIST[EFFECTOR_LIST_SIZE];
 
 
-void startEffectorHandlerLoop();
+void startEffectorHandlerLoop(volatile unsigned int * sensorTriggerMap);
 void defaultEffectorService(int state, int * pins, int pinsLength);
 int validEffector(unsigned int sensorPin);
 void togglePins(unsigned int sensors[], unsigned int sensorsLength,unsigned int onTimeMs, unsigned int offTimeMs);
