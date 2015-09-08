@@ -2,20 +2,13 @@
 #define EFFECTORS_UTILS_HEADER
 
 #include "simpletools.h"
-
-#define EFFECTOR_LIST_SIZE 0
-#define EFFECTOR_PINS_SIZE 8
-
-typedef struct {
-  char name[12];
-  int pinNumbersSize;
-  int * pinNumbers;
-  void (*serviceRoutine)(unsigned int); 
-} Effector;
+#include "structs.h"
 
 
-extern int EFFECTOR_PINS[];
-extern Effector EFFECTOR_LIST[EFFECTOR_LIST_SIZE];
+
+
+
+
 
 
 void startEffectorHandlerLoop(volatile unsigned int * sensorTriggerMap);

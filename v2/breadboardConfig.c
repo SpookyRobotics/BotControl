@@ -1,6 +1,6 @@
 #include "breadboardConfig.h"
 
-/* Startup 
+/* Breadboard config 
 #define SENSOR_LIST_SIZE 2
 #define SENSOR_PINS_SIZE 2
 

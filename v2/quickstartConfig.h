@@ -2,7 +2,7 @@
 #define QUICKSTART_CONFIG_HEADER
 #include "sensorsUtils.h"
 #include "effectorsUtils.h"
-
+#include "structs.h"
 /***********************
  * Begin Effector layout
  ***********************/

@@ -15,12 +15,12 @@ void defaultEffectorService(int pinState, int * pins, int pinsLength){
   for(int index = 0; index < pinsLength; index++){
     if(pinState == 0){
       high(pins[index]);
-      pause(100);
+      pause(500);
       low(pins[index]);
     }
     else{
       high(pins[index]);
-      pause(300);
+      pause(100);
       low(pins[index]);
     }   
   }    
