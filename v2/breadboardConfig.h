@@ -3,6 +3,7 @@
 
 #include "sensorsUtils.h"
 #include "effectorsUtils.h"
+#include "timeConstants.h"
 
 /***********************
  * Begin Effector layout
@@ -65,5 +66,6 @@ void breadboardEffectorsInit();
  */
 
 void breadboardInitSynchronizedTimerFunctions();
+void servoTest();
 
 #endif

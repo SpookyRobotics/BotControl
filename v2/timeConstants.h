@@ -1,0 +1,15 @@
+#ifndef TIME_CONSTANTS_HEADER
+#define TIME_CONSTANTS_HEADER
+
+#define MILLISECONDS_100 (CLKFREQ / 10)
+#define MILLISECONDS_10 (CLKFREQ / 100)
+#define MILLISECONDS_1 (CLKFREQ / 1000)
+#define MICROSECONDS_100 (CLKFREQ / 10000)
+#define MICROSECONDS_10 (CLKFREQ / 100000)
+#define MICROSECONDS_1 (CLKFREQ / 1000000)
+
+#define SYSTEM_CLK CNT
+
+#define WAIT(cycles,multiplier) waitcnt((cycles*multiplier) + SYSTEM_CLK)
+	
+#endif

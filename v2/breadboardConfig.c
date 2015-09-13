@@ -148,4 +148,15 @@ unsigned int serviceReedSwitch(){
   }    
 }  
 
+void servoTest(){
+  // Adjust in increments of 5
+  // 45 = SUPER SLOW COUNTER CLOCKWISE
+  int multiplier = 45;return;
+  while(1)  {
+    WAIT(MICROSECONDS_10,multiplier);
+    high(SERVO1);
+    WAIT(MICROSECONDS_10,multiplier);
+    low(SERVO1);
+  }    
+}  
 

@@ -24,8 +24,14 @@ void cog2Program(){
   startEffectorHandlerLoop(&SENSOR_TRIGGER_MAP);    
 }
 
+// Control motor output
+void cog3Program(){
+  servoTest();
+}  
+
 int main(){
   cog_run(&cog1Program,100);
   cog_run(&cog2Program,100); 
+  cog_run(&cog3Program,100);
   return 0;
 }

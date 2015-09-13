@@ -12,6 +12,7 @@ quickstartConfig.h
 main.h
 structs.h
 config.h
+timeConstants.h
 >compiler=C
 >memtype=lmm main ram
 >optimize=-Os
