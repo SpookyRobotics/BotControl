@@ -29,21 +29,7 @@ void cog3Program(){
   servoTest();
 }  
 
-void remoteInstructor(){
-  InstructorCommand command = readInstructorCommand();
-  for(int index = command.startEffectorsIndex; index < command.endEffectorsIndex; index++){
-    char mask = 0x80 >> index;
-    if(command.effectorsMask & mask){
-      effectorRun(index);
-    }      
-  }
-  for(int index = command.startSensorsIndex; index < command.endSensorsIndex; index++){
-    char mask = 0x80 >> index;
-    if(command.sensorsMask & mask){
-      effectorRun(index);
-    }      
-  }     
-}  
+ 
 
 int main(){
   cog_run(&cog1Program,100);

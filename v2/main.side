@@ -13,6 +13,8 @@ main.h
 structs.h
 config.h
 timeConstants.h
+remoteInstructor.c
+remoteInstructor.h
 >compiler=C
 >memtype=lmm main ram
 >optimize=-Os

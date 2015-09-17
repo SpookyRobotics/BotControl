@@ -18,6 +18,16 @@ typedef struct {
   
 } Sensor;
 
+typedef struct {
+  char valid;
+  unsigned int startEffectorsIndex;
+  unsigned int endEffectorsIndex;
+  unsigned int startSensorsIndex;
+  unsigned int endSensorsIndex;
+  unsigned int effectorsMask;
+  unsigned int sensorsMask;
+} InstructorCommand;
+
 extern volatile unsigned int SENSOR_TRIGGER_MAP;
 extern Sensor SENSOR_LIST[SENSOR_LIST_SIZE];
 extern int SENSOR_PINS[SENSOR_PINS_SIZE];
