@@ -5,7 +5,9 @@
 #define VALID_INSTRUCTOR_COMMAND 101
 #include "structs.h"
 
+void validateInstructorCommand(InstructorCommand * command);
 void readInstructorCommand(InstructorCommand * command);
+void debugInstructorCommand(InstructorCommand * command);
 void runRemoteInstructor();
 void effectorRun(unsigned int effector);
 void sensorRun(unsigned int sensor);

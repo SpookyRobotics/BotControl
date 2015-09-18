@@ -1,5 +1,6 @@
 #include "main.h"
 #include "breadboardConfig.h"
+#include "remoteInstructor.h"
 
 volatile unsigned int SENSOR_TRIGGER_MAP;
 Sensor SENSOR_LIST[SENSOR_LIST_SIZE];
@@ -32,8 +33,10 @@ void cog3Program(){
  
 
 int main(){
-  cog_run(&cog1Program,100);
+  /*cog_run(&cog1Program,100);
   cog_run(&cog2Program,100); 
-  cog_run(&cog3Program,100);
+  cog_run(&cog3Program,100);*/
+  EFFECTORS_INIT();
+  runRemoteInstructor();
   return 0;
 }
