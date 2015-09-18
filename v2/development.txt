@@ -1,0 +1,14 @@
+﻿	After getting frustrated with the structure of v1, I rewrote the application with a far cleaner project structure in my mind. The ability to quickly switch between different configurations was the guiding principal behind the rewrite. Config.h defines all of the system variable sizes and main.c needs a reference to a specific hardwareConfig.h file. By using the c pre-processor  main.h takes care of redefining the function names to the selected config. This setup has allowed for quick development across the breadboard and Quickstart module, while also reminding me of the devilish bugs programming in C can produce. 
+	The system functions are now as follows:
+
+Remote Instructor – able to read from a serial port and execute an Effector or Sensor routine, passing in the global trigger map variable.
+Sensor Handler Loop – continuously run Sensor service routines and update the global trigger map variable.
+Effector Handler Loop – continuously run Effector service routines, passing in the global trigger map variable.
+Synchronous Function Loop – schedule a list of functions to be run at regular intervals. Imprecise and only used for non time critical functions
+
+Starting to use 20Kb of code, so this is all the system will get for now. Adding the remote instructor doubled the code size, however it will likely be the most used aspect of the project. By adding a small function that reads static data in the form of remote instructor commands, the project should be able to replay a series of inputs without human intervention.
+
+Remote Instructor currently runs over the serial port connection. Hoping to add an xbee to the project to allow for remote communication. 
+
+Future steps will be to write an application to send Remote Instructor commands in a user friendly way,
+automating the running of the Remote Instructor from static memory, Xbee communication with another system.
