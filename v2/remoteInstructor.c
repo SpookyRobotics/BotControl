@@ -1,16 +1,24 @@
 #include "remoteInstructor.h"
 #include "simpletools.h"
+#include "fdserial.h"
 
+fdserial * serialIn;
+void setup(){
+  serialIn = fdserial_open (31, 30, 0, 9600);
+}  
 void runRemoteInstructor(){
+  setup();
   InstructorCommand command;
   command.valid = INVALID_INSTRUCTOR_COMMAND;
-  print("EFFECTOR_LIST_SIZE %d\n",EFFECTOR_LIST_SIZE);
-  print("SENSOR_LIST_SIZE %d\n",SENSOR_LIST_SIZE);
+  dprint(serialIn,"EFFECTOR_LIST_SIZE %d\n",EFFECTOR_LIST_SIZE);
+  dprint(serialIn,"SENSOR_LIST_SIZE %d\n",SENSOR_LIST_SIZE);
 
   while(1){  
     readInstructorCommand(&command);
     validateInstructorCommand(&command);
+    #ifdef DEBUG
     debugInstructorCommand(&command);
+    #endif 
     if(command.valid != VALID_INSTRUCTOR_COMMAND){ 
       continue;
     } 
@@ -52,8 +60,9 @@ void validateInstructorCommand(InstructorCommand * commandPtr){
   
 }  
 
+#ifdef DEBUG
 void debugInstructorCommand(InstructorCommand * commandPtr){
-  print("Instructor: %d %d %d %d %d %d\n", (*commandPtr).startEffectorsIndex, 
+  dprint(serialIn,"Instructor: %d %d %d %d %d %d\n", (*commandPtr).startEffectorsIndex, 
                                       (*commandPtr).endEffectorsIndex,
                                       (*commandPtr).startSensorsIndex,
                                       (*commandPtr).endSensorsIndex,
@@ -72,21 +81,33 @@ void debugInstructorCommand(InstructorCommand * commandPtr){
                                    command.endSensorsIndex <= SENSOR_LIST_SIZE && 
                                    command.endSensorsIndex >= command.startSensorsIndex;  
   if(!validStartEffectorsIndex){
-    print("Invalid  StartEffectorsIndex\n");
+    dprint(serialIn,"Invalid  StartEffectorsIndex\n");
   }
   if(!validEndEffectorsIndex){
-    print("Invalid  EndEffectorsIndex\n");
+   dprint(serialIn,"Invalid  EndEffectorsIndex\n");
   }
   if(!validStartSensorsIndex){
-    print("Invalid  StartSensorsIndex\n");
+    dprint(serialIn,"Invalid  StartSensorsIndex\n");
   }
   if(!validEndSensorsIndex){
-    print("Invalid  EndSensorsIndex\n");
+    dprint(serialIn,"Invalid  EndSensorsIndex\n");
   }        
    
 }  
 
+#endif
 
+int readInt(){
+ int result = 0; 
+ int index = 0;
+ int byte = fdserial_rxChar(serialIn);
+ while(byte !=  10){
+   byte -= 48;
+   result += byte;
+   byte = fdserial_rxChar(serialIn);
+ }
+ return result;   
+}  
 void readInstructorCommand(InstructorCommand * commandPtr){
   (*commandPtr).valid = INVALID_INSTRUCTOR_COMMAND;
    int startEffectorsIndex;
@@ -96,23 +117,23 @@ void readInstructorCommand(InstructorCommand * commandPtr){
    int effectorsMask;
    int sensorsMask;
   
-  print("Enter startEffectorsIndex: ");                        
-  scan("%d\n", &startEffectorsIndex);
+  dprint(serialIn,"Enter startEffectorsIndex: ");                        
+  startEffectorsIndex = readInt();
   
-  print("Enter endEffectorsIndex: ");
-  scan("%d\n", &endEffectorsIndex);
-
-  print("Enter startSensorsIndex: ");
-  scan("%d\n", &startSensorsIndex);
-
-  print("Enter endSensorsIndex: ");
-  scan("%d\n", &endSensorsIndex);
+  dprint(serialIn,"Enter endEffectorsIndex: ");
+  endEffectorsIndex = readInt();
   
-  print("Enter effectorsMask: ");
-  scan("%d\n", &effectorsMask);
+  dprint(serialIn,"Enter startSensorsIndex: ");
+  startSensorsIndex = readInt();
   
-  print("Enter sensorsMask: ");
-  scan("%d\n", &sensorsMask);
+  dprint(serialIn,"Enter endSensorsIndex: ");
+  endSensorsIndex = readInt();
+  
+  dprint(serialIn,"Enter effectorsMask: ");
+  effectorsMask = readInt();
+  
+  dprint(serialIn,"Enter sensorsMask: ");
+  sensorsMask = readInt();
   
   (*commandPtr).startEffectorsIndex = startEffectorsIndex;
   (*commandPtr).endEffectorsIndex = endEffectorsIndex;

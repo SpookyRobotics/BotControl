@@ -24,4 +24,4 @@ remoteInstructor.h
 >-enable_pruning
 >defs::-std=c99 -save-temps
 >-ltiny
->BOARD::RCFAST
+>BOARD::QUICKSTART

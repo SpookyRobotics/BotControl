@@ -1,6 +1,7 @@
 #include "main.h"
 #include "breadboardConfig.h"
 #include "remoteInstructor.h"
+#include "fdserial.h"
 
 volatile unsigned int SENSOR_TRIGGER_MAP;
 Sensor SENSOR_LIST[SENSOR_LIST_SIZE];
@@ -30,7 +31,19 @@ void cog3Program(){
   servoTest();
 }  
 
- 
+/*void xbeeRun(){
+  fdserial * xbee = fdserial_open(1, 0, 0, 9600);
+  while(1){
+      writeChar(xbee, CLS);
+
+    char dead[] = {0xD,0xE,0xA,0xD,0xA};
+    dprint(xbee, dead);
+    high(LED0);
+    pause(5000);
+    low(LED0);
+    pause(5000);
+  }    
+}*/
 
 int main(){
   /*cog_run(&cog1Program,100);
@@ -38,5 +51,6 @@ int main(){
   cog_run(&cog3Program,100);*/
   EFFECTORS_INIT();
   runRemoteInstructor();
+  //xbeeRun();
   return 0;
 }
